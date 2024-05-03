@@ -1,25 +1,45 @@
-# messenger-bot-nodejs
-- A simple Facebook Messenger Chatbot using Mesenger Platform (Node.js)
-- Test this bot (this project) now : https://my-chatbot-haryphamdev.herokuapp.com/
-- Guide to set up this project: https://www.youtube.com/watch?v=h-JqLlNTfrc
-- Full tutorial: https://www.youtube.com/watch?v=h-JqLlNTfrc&list=PLNOjHC_BXrfB8DcOCHtKPWPMl4t9PG5cI&index=2&t=0s
+# node-js-getting-started
 
-## How to run this project ? 
+A barebones Node.js app using [Express 4](http://expressjs.com/).
 
-You can set up this project by following these steps below or an easier way, I created a video to set up this project ( Watch my video: https://www.youtube.com/watch?v=h-JqLlNTfrc )
-### 1. Clone this project
-- Copy file .env.example -> create a .env file at the root folder -> fill all app variables in the .evn file
-- Run the "npm install" to test project at the localhost
+This application supports the [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
 
-### 2. Create a Heroku app, a Facebook Page, a Facebook App.
-#### 2.1 Create a Heroku app
-- Deploy app to Heroku ( need to setup dev dependencies:
-heroku config:set NPM_CONFIG_PRODUCTION=false
-)
-- Config env variables (setup dev dependencies)
-#### 2.2 Facebook Page
-- Create a Facebook Page
-- Config Whitelisted Domains (add the Heroku app domain)
-#### 2.3 Facebook App
-- Create a Facebook App
-- Config webhook
+## Running Locally
+
+Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
+
+```sh
+$ git clone https://github.com/heroku/node-js-getting-started.git # or clone your own fork
+$ cd node-js-getting-started
+$ npm install
+$ npm start
+```
+
+Your app should now be running on [localhost:5001](http://localhost:5001/).
+
+## Deploying to Heroku
+
+Using resources for this example app counts towards your usage. [Delete your app](https://devcenter.heroku.com/articles/heroku-cli-commands#heroku-apps-destroy) and [database](https://devcenter.heroku.com/articles/heroku-postgresql#removing-the-add-on) as soon as you are done experimenting to control costs.
+
+By default, apps use Eco dynos if you are subscribed to Eco. Otherwise, it defaults to Basic dynos. The Eco dynos plan is shared across all Eco dynos in your account and is recommended if you plan on deploying many small apps to Heroku. Learn more about our low-cost plans [here](https://blog.heroku.com/new-low-cost-plans).
+
+Eligible students can apply for platform credits through our new [Heroku for GitHub Students program](https://blog.heroku.com/github-student-developer-program).
+
+```
+$ heroku create
+$ git push heroku main
+$ heroku open
+```
+or
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+## Documentation
+
+For more information about using Node.js on Heroku, see these Dev Center articles:
+
+- [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
+- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
+- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
+- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
+- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
