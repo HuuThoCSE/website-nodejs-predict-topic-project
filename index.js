@@ -71,7 +71,7 @@ express().post('/webhook', (req, res) => {
 // });
 
 // Add support for GET requests to our webhook
-app.get("/webhook", (req, res) => {
+express().get("/webhook", (req, res) => {
 
 // Parse the query params
     let mode = req.query["hub.mode"];
