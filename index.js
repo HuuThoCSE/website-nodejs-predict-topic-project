@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const path = require('path')
 
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 80
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
@@ -10,8 +10,6 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-
-
 
 // Parse application/x-www-form-urlencoded
 express().use(bodyParser.urlencoded({ extended: false }))
