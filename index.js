@@ -4,6 +4,15 @@ const path = require('path')
 
 const PORT = process.env.PORT || 8080
 
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('pages/index'))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+
+
 // Parse application/x-www-form-urlencoded
 express().use(bodyParser.urlencoded({ extended: false }))
 
@@ -60,10 +69,3 @@ express().get('/webhook', (req, res) => {
         }
     }
 });
-
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
